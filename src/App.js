@@ -1,22 +1,22 @@
-import logo from './logo.svg';
+import React, { useState } from 'react'
 import './App.css';
+import List from './components/List'
+import Controls from './components/Controls'
 
 function App() {
+
+  const [stateList, setstateList] = useState([])
+  const [stateHistory, setstateHistory] = useState([])
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <div className="Component">
+          {(stateList.length > 0) ? <List stateList={stateList} setList={setstateList} setstateHistory={setstateHistory} /> : null}
+        </div>
+        <div className="Component">
+          <Controls setList={setstateList} list={stateList} setstateHistory={setstateHistory} stateHistory={stateHistory} />
+        </div>
       </header>
     </div>
   );

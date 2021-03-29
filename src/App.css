@@ -17,11 +17,45 @@
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.Component {
+  margin:0px;
+}
+
+.ButtonContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.Button {
+  height: 30px;
+  width: 50px;
+  margin: 5px;
+}
+
+.FormLabel {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 10px;
+}
+.ButtonSend {
+  width: 100%;
+  margin-top: 2px;
+}
+.FormContainer {
+  display:flex;
+  align-items: center;
+}
+.ListContainer {
+  height: 300px;
+  width: 200px;
 }
 
 .App-link {
